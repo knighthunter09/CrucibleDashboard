@@ -1,0 +1,62 @@
+
+{
+    "reviewData" : [ {
+        "projectKey" : "CR-FOO1",
+        "name" : "Example review.",
+        "description" : "Description or statement of objectives for this example review.",
+        "author" : {
+            "userName" : "joe1",
+            "displayName" : "Joe Krustofski1",
+            "avatarUrl" : "http://foo.com/avatar"
+        },
+        "moderator" : {
+            "userName" : "scott1",
+            "displayName" : "Scott the Moderator",
+            "avatarUrl" : "http://foo.com/avatar"
+        },
+        "creator" : {
+            "userName" : "joe1",
+            "displayName" : "Joe Krustofski",
+            "avatarUrl" : "http://foo.com/avatar"
+        },
+        "permaId" : {
+            "id" : "CR-FOO-211"
+        },
+        "permaIdHistory" : [ "CR-FOO-211" ],
+        "type" : "REVIEW",
+        "allowReviewersToJoin" : true,
+        "metricsVersion" : 4,
+        "createDate" : "2014-09-17T14:52:27.402+0200",
+        "dueDate" : "2014-09-18T14:52:27.402+0200",
+        "jiraIssueKey" : "FOO1-6754"
+    }, {
+        "projectKey" : "CR-FOO2",
+        "name" : "Example review.",
+        "description" : "Description or statement of objectives for this example review.",
+        "author" : {
+            "userName" : "joe2",
+            "displayName" : "Joe Krustofski",
+            "avatarUrl" : "http://foo.com/avatar"
+        },
+        "moderator" : {
+            "userName" : "scott2",
+            "displayName" : "Scott the Moderator",
+            "avatarUrl" : "http://foo.com/avatar"
+        },
+        "creator" : {
+            "userName" : "joe2",
+            "displayName" : "Joe Krustofski",
+            "avatarUrl" : "http://foo.com/avatar"
+        },
+        "permaId" : {
+            "id" : "CR-FOO-22"
+        },
+        "permaIdHistory" : [ "CR-FOO-22" ],
+        "type" : "REVIEW",
+        "allowReviewersToJoin" : true,
+        "metricsVersion" : 4,
+        "createDate" : "2014-09-17T14:52:27.402+0200",
+        "dueDate" : "2014-09-18T14:52:27.402+0200",
+        "jiraIssueKey" : "FOO2-6754"
+    } ]
+}

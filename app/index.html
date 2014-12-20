@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crucible Dashboard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body ng-controller="mainCtrl">
+<!--Navbar-->
+<div class="navbar navbar-inverse">
+    <div class="container navbar-left" id="heading">
+        <a class="navbar-brand " href="#">Crucible Dashboard</a>
+    </div>
+</div>
+<div class="alert alert-danger container-fluid" ng-show="error">
+    Error ({{error}}). The product data was not loaded.
+    <a href="index.html" class="alert-link">Click here to try again</a>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-2">
+            <!--Left Navigation Panel-->
+            <div class="btn-group-vertical">
+                <p><a class="btn btn-default btn-block btn-lg" role="button" href="#/dashboard"
+                      ng-click="setCategoryClass()" ng-class="getCategoryClass()">Reviews&nbsp;&nbsp;<span
+                        class="glyphicon glyphicon-dashboard"></span></a></p>
+
+                <p ng-repeat="category in data.categories">
+                    <a class="btn btn-default btn-block btn-lg" role="button" href="#/{{category | lowercase}}"
+                       ng-click="setCategoryClass(category)" ng-class="getCategoryClass(category)">
+                        {{category}}</a></p>
+            </div>
+        </div>
+        <div class="col-xs-10">
+            <!--Center Panel-->
+            <!--<div class="panel panel-default">-->
+                <ng-view/>
+                <!--<div class="panel-heading">Action Bar</div>
+                <div class="panel-body">
+                    <div ng-view></div>
+                </div>-->
+            <!--</div>-->
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid">
+    <p class="navbar navbar-default navbar-fixed-bottom">
+        Seed app: v<span app-version></span>
+        <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a
+                href="http://browsehappy.com/">upgrade
+            your browser</a> to improve your experience.</p>
+        <![endif]-->
+    </p>
+</div>
+
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="app.js"></script>
+<script src="service/dashboardComponentFactory.js"></script>
+<script src="components/dashboardCtrl.js"></script>
+<script src="components/closedCtrl.js"></script>
+<script src="components/draftsCtrl.js"></script>
+<script src="components/abandonedCtrl.js"></script>
+<script src="components/version/version.js"></script>
+<script src="components/version/version-directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+<link href="bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet"/>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+</div>
+</body>
+</html>

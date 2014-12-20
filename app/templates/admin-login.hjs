@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{ title }}</title>
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+        <link href="bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet"/>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+        <style>
+            body {
+                background-color: #59afe1;
+                	min-width: 512px;
+                	width: 512px;
+                	margin: 0px auto;
+                	height: 100%;
+            }
+            .admin .image {
+                padding: 10%;
+                background: url(/stylesheets/images/jira_logo_landing.png) no-repeat top center;
+            }
+        </style>
+	</head>
+	<body class="admin">
+	    <div class="image"></div>
+		<div class="jumbotron">
+			<form role="form" action="/adminValidation" method="post" name="adminForm">
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" name="username" placeholder="Enter user name">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <label for="host">Server</label>
+                <input type="text" class="form-control" name="host" placeholder="JIRA server host">
+              </div>
+              <div class="form-group">
+                 <label for="port">Port</label>
+                 <input type="text" class="form-control" name="port" placeholder="JIRA server port">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+		</div>
+	</body>
+</html>

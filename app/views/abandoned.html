@@ -1,0 +1,44 @@
+<style>
+    .odd {
+        background-color: lightcoral
+    }
+
+    .even {
+        background-color: lavenderblush
+    }
+</style>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="#/abandoned" class="btn btn-success btn-sm" ng-click="recoverReviews()"><i class="fa fa-plus fa-lg"></i>&nbsp;Recover</a>
+        <a href="#/abandoned" class="btn btn-danger btn-sm" ng-click="deleteReviews()"><i class="fa fa-trash-o fa-lg"></i>&nbsp;Delete</a>
+    </div>
+    <div class="panel-body" style="background-color: #bfd5ff">
+        <table class="table table-striped table-bordered">
+            <thead>
+            <tr>
+                <th ng-repeat="item in data.headers" class="table-heading">{{item}}</th>
+            </tr>
+            </thead>
+            <tbody class="table-striped ">
+            <tr ng-if="!data.allData || !data.allData.length">
+                <td colspan="{{data.headers.length}}">
+                    <p style="padding: 1em;"><span
+                            style="font-weight: bold;font-size: 15px;"> No data to display </span></p></td>
+            </tr>
+            <tr ng-repeat="item in data.allData" ng-class="$odd ? 'odd' : 'even'">
+                <td><input type="checkbox" ng-checked="checkSelected(item.permaId.id)" ng-click="toggleSelection(item.permaId.id)"></td>
+                <td>{{$index + 1}}</td>
+                <td>{{item.permaId.id}}</td>
+                <td>{{item.projectKey}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.description}}</td>
+                <td>{{item.author.displayName}}</td>
+                <td>{{item.creator.displayName}}</td>
+                <td>{{item.createDate | date}}</td>
+                <td>{{item.jiraIssueKey}}</td>
+                <td>{{item.state}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
