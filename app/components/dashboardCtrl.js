@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.dashboard',['ngRoute']).config(['$routeProvider', function($routeProvider) {
+angular.module('myApp.dashboard',['ngRoute','paginatorModule']).config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/dashboard', {
             templateUrl: 'views/dashboard.html',
             controller: 'dashboardCtrl'

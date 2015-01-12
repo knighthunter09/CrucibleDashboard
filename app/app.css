@@ -1,30 +1,37 @@
 /* app css stylesheet */
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+.menuSelect {
+  background-color: hotpink !important;
 }
 
-.menu:before {
-  content: "[";
+#menu:hover {
+background-color: darkmagenta !important;
 }
 
-.menu:after {
-  content: "]";
+#menu:hover,#menu:focus,#menu {
+  cursor: pointer;
+}
+#menu {
+  margin-top: 10px;
+  background-color: #ffff00;
 }
 
-.menu > li {
-  display: inline;
+#dropDownMenu li {
+  background-color: #00b3ee !important;
+  font-size: large;
+  font-weight: 900;
+  font-family: Calibri;
 }
 
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
+#dropDownMenu li:hover {
+  background-color: #0081c2;
 }
+/*.menuItem {
+  list-style-type: none;.
+  cursor:pointer;
+  display: block;
+}
+.menuItem:hover {
+  background-color: orangered;
+}*/
 
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
-}
